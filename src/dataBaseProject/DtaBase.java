@@ -6,15 +6,11 @@ import java.util.Scanner;
 public class DtaBase {
 	
  public static void main(String args[]){
-	  
-	String response;
+	  String response;
+
 	 ArrayList<Book> allBooks= new  ArrayList<Book>();
 	 
- 
-	 
-	 Scanner scan= new Scanner(System.in);
-	 
-	// Book b = new Book(response, response, response, response, 0);
+
 	 Book book1 = new Book("Java1001", "Head First Java", "Kathy Sierra and Bert Bates", "Easy to read Java workbook", 47.5);
 	 Book book2 = new Book("Java1002", "Thinking in Java", " ruce Eckel", "Details about Java under the hood", 20.0);
 	 Book book3 = new Book("Oracl1003", "OCP: Oracle Certified Professional Java SE", "Jeanne Boyarsky", "Everything you need to know in one place", 45.0);
@@ -22,11 +18,7 @@ public class DtaBase {
 	 Book book5 = new Book("Zombie1005", "The Maker's Guide to the Zombie Apocalypse", "Simon Monk", "Easy to read Java workbook", 10);
 	 Book book6 = new Book("Rasp1005", "Raspberry Pi Projects for the Evil Genius", "Donald Norris", "A dozen fiendishly fun projects for the Raspberry Pi!", 16);
 	 
-	  
-	 
-	 
-	 
-	 
+
 	  allBooks.add(book1);
 	  
 	  allBooks.add(book2);
@@ -38,39 +30,37 @@ public class DtaBase {
 	  allBooks.add(book5);
 	  
 	  allBooks.add(book6);
-	   
-	  
-	 
-	  
-	  
-	 
-	  
 
- 
-	  
-System.out.println( book6.getTitle());
+
+
+
+
+
+
+
+
+	 Scanner scan = new Scanner(System.in);
+
 	   
 	  
 	   
 		do{
-	  Scanner s = new Scanner(System.in);
-	  System.out.println( "Enter book's SKU:");
-//	  String input =s.nextLine();
-//	  book1.setSku(input);
-	  s.nextLine();
-	 // int index =allBooks.indexOf(input);
-	  if(allBooks.contains(book1.getSku())){
-		  System.out.println("THis item is available.\r\r");
+
+	  System.out.println( "Enter book's SKU to search a book::");
+	  String input =scan.nextLine();
+
+	  if(input.equalsIgnoreCase(book1.getSku())){
+		  System.out.println("This item is available.\r\r");
 		 
 		  System.out.println("SKU:   \t"+ book1.getSku());
 		  System.out.println("Title: \t" +book1.getTitle());
 		  System.out.println("Author:\t"+ book1.getAuthor());
-		  System.out.println( "Description: \t"+book1.getDesciription());
+		  System.out.println("Description: \t"+book1.getDesciription());
 		  System.out.println("Price:\t" + book1.getPrice());
 		  
 	  }
-	  else if(allBooks.contains(book2.getSku())){
-		  System.out.println("THis item is available.\r\r");
+	  else if(input.equalsIgnoreCase(book2.getSku()) ){
+		  System.out.println("This item is available.\r\r");
 		 
 		  System.out.println("SKU:   \t"+ book2.getSku());
 		  System.out.println("Title: \t" +book2.getTitle());
@@ -79,7 +69,7 @@ System.out.println( book6.getTitle());
 		  System.out.println("Price:\t" + book1.getPrice());
 		  
 	  }
-	  else if(allBooks.contains(book3.getSku())){
+	  else if(input.equalsIgnoreCase(book3.getSku())){
 		  System.out.println("THis item is available.\r\r");
 		 
 		  System.out.println("SKU:   \t"+ book3.getSku());
@@ -89,7 +79,7 @@ System.out.println( book6.getTitle());
 		  System.out.println("Price:\t" + book3.getPrice());
 		  
 	  }
-	  else if(allBooks.contains(book4.getSku())){
+	  else if(input.equalsIgnoreCase(book4.getSku())){
 		  System.out.println("THis item is available.\r\r");
 		 
 		  System.out.println("SKU:   \t"+ book4.getSku());
@@ -99,7 +89,7 @@ System.out.println( book6.getTitle());
 		  System.out.println("Price:\t" + book4.getPrice());
 		  
 	  }
-	  else if(allBooks.contains(book5.getSku())){
+	  else if(input.equalsIgnoreCase(book5.getSku())){
 		  System.out.println("THis item is available.\r\r");
 		 
 		  System.out.println("SKU:   \t"+ book5.getSku());
@@ -108,7 +98,7 @@ System.out.println( book6.getTitle());
 		  System.out.println( "Description: \t"+book5.getPrice());
 		  
 	  }
-	  else if(allBooks.contains(book6.getSku())){
+	  else if(input.equalsIgnoreCase(book6.getSku())){
 		  System.out.println("THis item is available.\r\r");
 		 
 		  System.out.println("SKU:   \t"+ book6.getSku());
@@ -127,12 +117,10 @@ System.out.println( book6.getTitle());
 	  response=  scan.nextLine();
 		}
 		
-	   while(response.equalsIgnoreCase( "yes"));
+	   while((response.equalsIgnoreCase( "yes")));
+
 	
- System.out.println("Bye");
+    System.out.println("Bye");
  }
 
 }
- // list of books
-// when they benter show them
- 
