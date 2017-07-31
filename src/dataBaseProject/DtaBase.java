@@ -4,67 +4,118 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DtaBase {
+	
  public static void main(String args[]){
+	  
 	String response;
-	 ArrayList<String> booksSku= new  ArrayList<String>();
-	 Scanner scan= new Scanner(System.in);
-	 Book b = new Book();
-	  booksSku.add("Java1001");
-	  booksSku.add( "Java1002");
-	  booksSku.add( "Oracl1003");
-	  booksSku.add( "Python1004");
-	  booksSku.add( "Zombie1005");
-	  booksSku.add( "Rasp1005");
+	 ArrayList<Book> allBooks= new  ArrayList<Book>();
 	 
-	  ArrayList<String> booksTitle= new  ArrayList<String>();
+ 
+	 
+	 Scanner scan= new Scanner(System.in);
+	 
+	// Book b = new Book(response, response, response, response, 0);
+	 Book book1 = new Book("Java1001", "Head First Java", "Kathy Sierra and Bert Bates", "Easy to read Java workbook", 47.5);
+	 Book book2 = new Book("Java1002", "Thinking in Java", " ruce Eckel", "Details about Java under the hood", 20.0);
+	 Book book3 = new Book("Oracl1003", "OCP: Oracle Certified Professional Java SE", "Jeanne Boyarsky", "Everything you need to know in one place", 45.0);
+	 Book book4 = new Book("Python1004", "Automate the Boring Stuff with Python", "Al Sweigart", "Defend Your Base with Simple Circuits, Arduino, and Raspberry Pi", 47.5);
+	 Book book5 = new Book("Zombie1005", "The Maker's Guide to the Zombie Apocalypse", "Simon Monk", "Easy to read Java workbook", 10);
+	 Book book6 = new Book("Rasp1005", "Raspberry Pi Projects for the Evil Genius", "Donald Norris", "A dozen fiendishly fun projects for the Raspberry Pi!", 16);
+	 
 	  
-	  booksTitle.add("Head First Java");
-	  booksTitle.add("Thinking in Java");
-	  booksTitle.add("OCP: Oracle Certified Professional Java SE");
-	  booksTitle.add("Automate the Boring Stuff with Python");
-	  booksTitle.add("The Maker's Guide to the Zombie Apocalypse");
-	  booksTitle.add("Raspberry Pi Projects for the Evil Genius");
+	 
+	 
+	 
+	 
+	  allBooks.add(book1);
 	  
-	  ArrayList<String> booksAuthor= new  ArrayList<String>();
-	  booksAuthor.add("Kathy Sierra and Bert Bates");
-	  booksAuthor.add("ruce Eckel");
-	  booksAuthor.add("Jeanne Boyarsky");
-	  booksAuthor.add("Al Sweigart");
-	  booksAuthor.add("Simon Monk");
-	  booksAuthor.add("Donald Norris");
+	  allBooks.add(book2);
+	  
+	  allBooks.add(book3);
+	  
+	  allBooks.add(book4);
+	  
+	  allBooks.add(book5);
+	  
+	  allBooks.add(book6);
+	   
+	  
+	 
+	  
+	  
+	 
 	  
 
-	  ArrayList<String> booksDiscription= new  ArrayList<String>();
-	  booksDiscription.add( "Easy to read Java workbook");
-	  booksDiscription.add( "Details about Java under the hood");
-	  booksDiscription.add( "Everything you need to know in one place");
-	  booksDiscription.add( "Defend Your Base with Simple Circuits, Arduino, and Raspberry Pi");
-	  booksDiscription.add( "A dozen fiendishly fun projects for the Raspberry Pi!");
+ 
 	  
-
-	  ArrayList<Double> booksPrice= new  ArrayList<Double>();
-	  booksPrice.add(47.50);
-	  booksPrice.add(20.00);
-	  booksPrice.add(45.00);
-	  booksPrice.add(10.50);
-	  booksPrice.add(16.50);
-	  booksPrice.add(14.75);
+System.out.println( book6.getTitle());
+	   
 	  
 	   
 		do{
 	  Scanner s = new Scanner(System.in);
 	  System.out.println( "Enter book's SKU:");
-	  String sku =s.nextLine();
-	  b.setSku(sku);
-	  int index =booksSku.indexOf(sku);
-	  if(booksSku.contains(sku)){
+//	  String input =s.nextLine();
+//	  book1.setSku(input);
+	  s.nextLine();
+	 // int index =allBooks.indexOf(input);
+	  if(allBooks.contains(book1.getSku())){
 		  System.out.println("THis item is available.\r\r");
-		//  for(int i=0;i<booksSku.size();i++)
-		  System.out.println("SKU:   \t"+ booksSku.get(index ));
-		  System.out.println("Title: \t" +booksTitle.get(index ));
-		  System.out.println("Author:\t"+ booksAuthor.get(index ));
-		  System.out.println( "Description: \t"+ booksDiscription.get(index ));
-		  System.out.println("Price:\t" + booksPrice.get(index ));
+		 
+		  System.out.println("SKU:   \t"+ book1.getSku());
+		  System.out.println("Title: \t" +book1.getTitle());
+		  System.out.println("Author:\t"+ book1.getAuthor());
+		  System.out.println( "Description: \t"+book1.getDesciription());
+		  System.out.println("Price:\t" + book1.getPrice());
+		  
+	  }
+	  else if(allBooks.contains(book2.getSku())){
+		  System.out.println("THis item is available.\r\r");
+		 
+		  System.out.println("SKU:   \t"+ book2.getSku());
+		  System.out.println("Title: \t" +book2.getTitle());
+		  System.out.println("Author:\t"+ book2.getAuthor());
+		  System.out.println( "Description: \t"+book2.getDesciription());
+		  System.out.println("Price:\t" + book1.getPrice());
+		  
+	  }
+	  else if(allBooks.contains(book3.getSku())){
+		  System.out.println("THis item is available.\r\r");
+		 
+		  System.out.println("SKU:   \t"+ book3.getSku());
+		  System.out.println("Title: \t" +book3.getTitle());
+		  System.out.println("Author:\t"+ book3.getAuthor());
+		  System.out.println( "Description: \t"+book3.getDesciription());
+		  System.out.println("Price:\t" + book3.getPrice());
+		  
+	  }
+	  else if(allBooks.contains(book4.getSku())){
+		  System.out.println("THis item is available.\r\r");
+		 
+		  System.out.println("SKU:   \t"+ book4.getSku());
+		  System.out.println("Title: \t" +book4.getTitle());
+		  System.out.println("Author:\t"+ book4.getAuthor());
+		  System.out.println( "Description: \t"+book4.getDesciription());
+		  System.out.println("Price:\t" + book4.getPrice());
+		  
+	  }
+	  else if(allBooks.contains(book5.getSku())){
+		  System.out.println("THis item is available.\r\r");
+		 
+		  System.out.println("SKU:   \t"+ book5.getSku());
+		  System.out.println("Title: \t" +book5.getTitle());
+		  System.out.println("Author:\t"+ book5.getAuthor());
+		  System.out.println( "Description: \t"+book5.getPrice());
+		  
+	  }
+	  else if(allBooks.contains(book6.getSku())){
+		  System.out.println("THis item is available.\r\r");
+		 
+		  System.out.println("SKU:   \t"+ book6.getSku());
+		  System.out.println("Title: \t" +book6.getTitle());
+		  System.out.println("Author:\t"+ book6.getAuthor());
+		  System.out.println( "Description: \t"+book6.getDesciription());
+		  System.out.println("Price:\t" + book6.getPrice());
 		  
 	  }
 	  else {
@@ -77,7 +128,9 @@ public class DtaBase {
 		}
 		
 	   while(response.equalsIgnoreCase( "yes"));
-	}
+	
+ System.out.println("Bye");
+ }
 
 }
  // list of books
